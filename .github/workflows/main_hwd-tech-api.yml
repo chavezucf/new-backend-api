@@ -25,7 +25,7 @@ jobs:
           npm run test --if-present
 
       - name: Archive production artifacts
-        run: zip -r ./node-app.zip . -x "*.git*" "*node_modules/*"
+        run: zip -r ./node-app.zip . -x "*.git*"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
